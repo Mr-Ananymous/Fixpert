@@ -49,6 +49,6 @@ app.get('/login',function (req, res) {
 app.get('/registration',function (req, res) {
    res.render("registration");
 });
+const PORT=process.env.PORT || 3000;
 
-
-app.listen(3000,() => console.info('Listening'));
+app.listen(PORT,() => console.info('Listening'));
