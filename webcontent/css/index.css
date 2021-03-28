@@ -1,0 +1,220 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background:cornsilk;
+    color: black;
+    font: 14px/25px ;
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0px auto;
+    padding: 0;
+    height: 135px;   
+}
+.container:after{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.container .row:before , .row:after{
+    content: " ";
+    display: block;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.container .row:before{
+    clear: both;
+}
+header{
+    background:url("../img/gunmetal.png");
+    font-family: 'Roboto', sans-serif;
+}
+header .logo img{
+    display: inline-block;
+    margin: auto;
+    padding:2px;
+    padding-left: 3px;
+}
+.menu{
+    display: inline-block;
+    float: right;
+    margin-right: 40px;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li{
+    padding-top: 15px;
+    float: left;
+}
+.menu li a{
+    font-size: 20px;
+    padding: 27px 17px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500px;
+    line-height: 1;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+.menu li a:hover{
+    color:steelblue;
+}
+
+.clear{
+    clear: both;
+    width: 100%;
+}
+/***show***/
+.show
+{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    height: 640px;
+    width: 100%;
+
+}
+.showtext {
+    margin-top: 100px;
+    margin-left:30px;
+    margin-bottom: 80px;
+    grid-row:1/7;
+    grid-column:3/7;
+    background-color: #cccccc;
+   
+}
+.showexp p{
+    font-size: 22px;
+}
+.showexp{
+    padding-left: 30px;
+    padding-top: 3px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.showdescribe{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: black;
+    padding-left: 20px;
+}
+.custombg{
+    background:url("../img/gunmetal.png");
+    color: white;
+}
+/***feautures***/
+#feautures{
+    margin-bottom: 30px;
+    
+
+}
+.feh1{
+
+    text-align: center;
+    margin: 20px auto 30px;
+}
+.feh1d{
+    font-style: normal;
+    background: black;
+    color: white;
+    border-right: 6px solid steelblue;
+    height: 60px;
+    display: inline-block;
+    padding-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    transform: rotate(0deg) scale(1.0) skew(-14deg) translate(0px);
+}
+
+.fetable{
+    text-align: left;
+    margin:20px 40px;
+}
+.fetxt{
+    
+    font-size: 24px;
+    
+}
+.fetxt-o{
+    font-size: 24px;
+    padding-right: 60px;
+}
+
+.fedes{
+    font-size: 28px;
+    color:white;
+}
+/***footer***/
+.foot-container{
+    background: black;
+    color: white;
+}
+.footer-list{
+    display: inline-block;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-list li{
+    padding-top: 15px;
+    padding-left: 80px;
+    padding-right: 20px;
+    float: left;
+}
+.footer-list li a{
+    font-size: 20px;
+    padding-top: 5px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500px;
+    line-height: 1;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+.foot-logo{
+    padding-top: 20px;
+}
+.symbols{
+    margin-left: 463px;
+    display: inline-block;
+    text-align: center;
+}
+.symbols li{
+    padding-left: 40px;
+    float:left;
+}
+
+.footer-last{
+    margin-top: 20px;
+    text-align: center;
+}
+.footerlast{
+    text-decoration: none;
+    padding-left: 40px;
+    color: steelblue;
+}

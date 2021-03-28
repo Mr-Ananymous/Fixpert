@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+  <style>
+   body {
+       font-family: 'Montserrat Alternates', sans-serif;
+   }
+   .bg
+   {
+    background:url("img/gunmetal.png");
+   }
+   .size{
+     font-size:15px;
+     font-family: 'Montserrat Alternates', sans-serif;
+   }
+   .ad{
+      right: 50px;
+      margin-right:0px;
+      top:absolute;
+      position: relative;
+   }
+
+  </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet"> 
+   <title> Welcome!</title> 
+</head>
+<body>
+   <div class="row bg" style="height: 120px; box-shadow:5px 10px 10px grey">
+       <div class="col-sm-4">
+        <a href="index"><img src="img/fixpert.png" alt="" style="width: 380px;height: 90px;padding-left: 25px;padding-top:2px ;padding-bottom: 2px;margin-top: 7px;"></a>          
+        
+       </div>
+       <div clas s="col-sm-8" style="margin-top: 35px;">
+        <nav class="navbar navbar-expand-md navbar-dark bg">
+        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white size" href="#">Home&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white size" href="#" data-toggle="modal" data-target="#serviceRequest">Service Requests&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white size" href="#"  data-toggle="modal" data-target="#history">History&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white size" href="#"><%= username %>&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item"> 
+                <button type="button" class="btn btn-secondary">Sign out</button>
+              </li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/user.png" style="width:50px;height:50px; ">
+            </ul>
+          </div>
+        </nav> 
+        </div>
+       </div> <br><br>
+       <div class="row">
+        <div class="col-sm-4"> <img src="img/aware.jpg" height="380px" width="300px" style="margin-left: 50px;"></div>
+    
+        <div class="col-sm-8">
+           <div id="demo" class="carousel slide " data-ride="carousel" style="width:100% ;">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+          
+           <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/carousel2.jpg" height="380px" width="800px">
+                </div>
+              <div class="carousel-item">
+                <img src="img/c2.jpg" height="380px" width="800px">
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel3.jpg" height="380px" width="800px">
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel4.jpg" height="380px" width="800px" >
+              </div>
+            </div>          
+          </div> 
+          </div>
+       </div>
+        <br><br><br>
+        <div class="container-fluid bg" style="box-shadow:5px 10px 10px grey">
+        <br><br>
+       <div class="card-columns">
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for your Air Conditioner</p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for your Telivision</p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for your Washing Machine</p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for your Fridge</p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for Electrical problems</p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-body text-center">
+      <p class="card-text size">Request service for Tap And Pipe Problems</p>
+    </div>
+  </div>
+  
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <form class="form-inline" style="margin-top:10px ; margin-left:50px" method="POST" action="/text/search">
+    <input class="form-control fa fa-search" type="text" name="key" id="key" placeholder="Search for shops and services" size="75"> &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-secondary">Search</button>     
+  </form><br><br><br>
+
+  </nav><br>  
+</div>
+
+
+
+<div class="modal fade" id="serviceRequest">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+
+      
+      <div class="modal-header">
+        <h4 class="modal-title">Service Requests</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        Data
+      </div>
+
+            <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="history">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+
+      
+      <div class="modal-header">
+        <h4 class="modal-title">Service Requests</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        Data
+      </div>
+
+            <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

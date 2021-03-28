@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+     <style>
+     body
+     {
+       background-color:white;
+       font-family: 'Montserrat Alternates', sans-serif;
+     }
+     .link{
+       color: inherit;
+     }
+     .link:hover{
+       text-decoration: none;
+       color:inherit;
+     }
+     .main{
+       left:20px;
+     }
+     .filter
+     {
+       position:absolute;
+       left:5px;
+       right:1500px;
+       height: 700px;
+       width:20%;
+       top:260px;
+     }
+     .f
+     {
+       font-size:20px;
+     }
+     .main
+     {
+       position:relative;
+     }
+     .product{
+       position:relative;
+       width:940px;
+       right:0px;
+       left:140px;
+       color:white;
+       font-family:'Roboto', sans-serif;
+       background:url("/img/gunmetal.png");
+     }
+     .spec
+     {
+       position:absolute;
+       top:0px;
+       right:0px;
+       width:720px;
+       left:220px;
+       padding-top:3px;
+     }
+     .pic
+     {
+       position:absolute;
+       top:0px;
+       left:70px;
+     }
+     .bgimg{
+         background:url("/img/gunmetal.png");
+     }
+     footer{
+       bottom:0px;
+       left:0px;
+       position:relative;
+       width:100%;
+       text-align:center;
+     }
+     </style>
+     <link rel="icon" type="image" href="/img/fixpert.png">
+    <title>Search results</title>
+  </head>
+  <body>
+      <div class="container-fluid bgimg text-white"  style="height: 150px; box-shadow:5px 10px 10px grey">
+        <nav class="navbar navbar-expand-sm navbar-dark shadow p-4 mb-4">
+        <a class="brand">
+           <img src="/img/fixpert.png" height="80px" width="240px">&nbsp;
+        </a>
+        &nbsp;    &nbsp;    &nbsp;
+    <form class="form-inline"  method="POST" action="/text/search">
+      <input class="form-control mr-sm-2 " type="text" placeholder="Search" name="key" size="70">
+      <button class="btn btn-secondary" >Search</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </form>
+    <a class="brand" href="#">
+       <img src="/img/user.png" width="50px">&nbsp;
+    </a>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     
+
+  </nav>
+</div><br><br>
+
+<h3 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Search Results </h3><hr>
+<%
+
+  if (shops.length!=0) {
+     var i=1;
+     shops.forEach(function (data) {
+
+%>
+<div class="container">
+<div class="container product"  style="height: 150px; box-shadow:5px 10px 10px grey">
+ <img src="/img/servicereq.png" height="130px" >
+   <div class="spec">
+           <h3><%=data.name%></h3>
+           <p><%=data.address %></p>
+           <form action="/fet/req" method="POST">
+             <input name="name" value= <%=data.name %> hidden>
+             <button class="btn btn-secondary">Request now </button>
+            </form> 
+    </div><hr>
+</div><br>
+<% 
+   i++;});
+}else{
+%>
+<div class="container">
+  <div class="container product"  style="height: 150px; box-shadow:5px 10px 10px grey">
+    <div class="spec">
+      <h3><br><br>Not found try different keyword</h3> 
+    </div></div></div><hr><br>
+<% }
+ %>
+ <br> <br><br>
+ <div class="container bg-light filter">
+ <div class="flexbox-colomn">
+     &nbsp;&nbsp; <img src="/img/webad.jpg" width="220px" height="380px"><br>
+</div>
+</div>
+</div>
+
+  </div></div><br>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>

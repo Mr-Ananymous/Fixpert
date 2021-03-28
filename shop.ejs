@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"> 
+    <style>
+
+        body {
+            background-color:white;
+            font-family:'Montserrat Alternates', sans-serif;;
+        }
+
+        .link {
+            color: inherit;
+        }
+
+            .link:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+
+        .main {
+            left: 20px;
+        }
+
+        .spec {
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            width: 720px;
+            left: 480px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .product {
+            position: relative;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .carousel {
+            height: 400px;
+            width: 400px;
+            left: 50px;
+            align-items: center;
+        }
+
+        .f {
+            font-size: 20px;
+        }
+        .move{
+          left:20%;
+          position: relative;
+        }
+
+        .pane {
+            font-size: 17px;
+        }
+
+        footer {
+            bottom: 0px;
+            left: 0px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+        .bgimg
+        {
+            background: url("/img/gunmetal.png");
+        }
+    </style>
+    <link rel="icon" type="image" href="/img/fixpert.png">
+    <title>Fixpert</title>
+</head>
+<body>
+    <div class="row bgimg" style="height: 120px; box-shadow:5px 10px 10px grey">
+        <div class="col-sm-4">
+         <a href="index"><img src="/img/fixpert.png" alt="" style="width: 380px;height: 90px;padding-left: 25px;padding-top:2px ;padding-bottom: 2px;margin-top: 7px;"></a>          
+         
+        </div>
+        <div clas s="col-sm-8" style="margin-top: 35px;">
+         <nav class="navbar navbar-expand-md navbar-dark bg">
+         
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+           <div class="collapse navbar-collapse" id="collapsibleNavbar">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link text-white size" href="#">Home&nbsp;&nbsp;</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link text-white size" href="#" data-toggle="modal" data-target="#serviceRequest">Service Requests&nbsp;&nbsp;</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link text-white size" href="#"  data-toggle="modal" data-target="#history">History&nbsp;&nbsp;</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link text-white size" href="#">User Info&nbsp;&nbsp;</a>
+               </li>
+               <li class="nav-item">
+                 <button type="button" class="btn btn-secondary">Sign out</button>
+               </li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <img src="/img/user.png" style="width:50px;height:50px; ">
+             </ul>
+           </div>
+         </nav> 
+         </div>
+        </div> <br><br>
+        <% var adstring="%20";
+           var main= mname;
+           var adstring1="%20service%20centre%20chrompet&t=&z=13&ie=UTF8&iwloc=&output=embed";
+           var src="https://maps.google.com/maps?q=";
+           var res1 = src.concat(main);
+           var res2 = res1.concat(adstring);
+           var final= res2.concat(adstring1);
+           console.log(final);
+
+        %>
+<div class="container-fluid bgimg text-white product"><br>
+  <div class="mapouter"><div class="gmap_canvas">
+    <iframe width="500" height="540" id="gmap_canvas" src="<%= final%> "  frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+    </iframe><a style="color:rgb(3, 16, 71); font-family: 'Roboto',sans-serif;" href="#">powered by google maps</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+    </style></div>
+    <div class="container bg-light text-dark spec">
+      <br>
+        <h3><%=sname %></h3>
+        <hr><b><p style="font-size:18px;"> Address</p></b>
+        <h2 class="pane"> <%=saddress %></h2>
+        <b><p style="font-size:18px;"> Services</p></b>
+        <h2 class="pane"> <%=sservices%></h2>
+        <h2 class="pane"> We Provide quality service for Home appliances </h2> <br><br>
+        <div class="card-columns move">
+          <a href="#" style="color: white;" data-toggle="modal" data-target="#ac"><div class="card bg-info" style="box-shadow:5px 10px 10px grey">
+            <div class="card-body text-center">
+              <p class="card-text size">Request service for your Air Conditioner</p>
+            </div> 
+          </div></a>
+          <a href="#" style="color: white;" data-toggle="modal" data-target="#ac"><div class="card bg-info"  style="box-shadow:5px 10px 10px grey">
+            <div class="card-body text-center">
+              <p class="card-text size">Request service for your Telivision</p>
+            </div>
+          </div></a>
+          <a href="#" style="color: white;"data-toggle="modal" data-target="#ac"> <div class="card bg-info"  style="box-shadow:5px 10px 10px grey">
+            <div class="card-body text-center">
+              <p class="card-text size">Request service for your Washing Machine</p>
+            </div>
+          </div></a>
+          <a href="#" style="color: white;"data-toggle="modal" data-target="#ac"> <div class="card bg-info"  style="box-shadow:5px 10px 10px grey"> 
+            <div class="card-body text-center">
+              <p class="card-text size">Request service for your Fridge</p>
+            </div>
+          </div></a>
+        
+    </div>
+</div>
+<br>
+<hr>
+    <div class="modal fade" id="ac" style="color: black;">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+    
+          
+          <div class="modal-header">
+            <h4 class="modal-title">Request Service</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <div class="modal-body">
+            <form method="POST" action="/place/request" id="comp">
+
+              Complaint <br><textarea name="complaint" rows="6" cols="50" form="comp"></textarea><br><br>
+              <input name="shop" value="<%=sname %>" hidden>
+              <input name="address" value="<%=saddress %>" hidden>
+              <p>Pay advance of Rs.100 and place now</p> <br>
+              <button type="submit" class="btn btn-secondary">Place Request</button> 
+
+            </form>
+          </div>
+    
+    
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<footer class="text-white bg-dark">
+    <br><br>
+    <h5 class="text-center"> &copy; copyrights 2020</h5><br>
+    <h6 class="text-center">
+       Fixpert.co pvt.ltd respects your privacy
+    </h6><br>
+    <h5 class="text-center">Contact info </h5>
+    <h6 class="text-center">&nbsp;&nbsp;<img src="/img/gmail.png" style="width:30px">&nbsp;iamnithishguhan@gmail.com </h6>
+    <h6 class="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sabaribalag3@gmail.com </h6>
+    <h6 class="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srinath652001@gmail.com </h6>
+    <br><br>
+</footer>
+  </body>
+</html>
